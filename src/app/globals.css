@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0E3B2E;
+  --color-secondary: #2F6B4F;
+  --color-accent: #8CC9A8;
+  --color-lightMint: #DDF5E8;
+  --color-backgroundCustom: #F7FBF8;
+  --color-textCustom: #1B1B1B;
+  --color-borderCustom: rgba(0,0,0,0.08);
+  
+  --font-playfair: var(--font-playfair);
+  --font-inter: var(--font-inter);
+  --font-poppins: var(--font-poppins);
+  
+  --animate-spin-slow: spin 12s linear infinite;
+  --animate-pulse-slow: pulse 8s ease-in-out infinite;
+}
+
+:root {
+  --background: #F7FBF8;
+  --foreground: #1B1B1B;
+}
+
+.dark {
+  --background: #051A14;
+  --foreground: #F7FBF8;
+  
+  /* Overwrite tailwind 4 theme mappings dynamically */
+  --color-backgroundCustom: #051A14;
+  --color-textCustom: #F7FBF8;
+  --color-borderCustom: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), serif;
+}
+
+button, input, select, textarea {
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F7FBF8;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #051A14;
+}
+::-webkit-scrollbar-thumb {
+  background: #0E3B2E;
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #8CC9A8;
+}
+
+/* Custom Animations */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.4; }
+}
+
+.animate-spin-slow {
+  animation: spin 20s linear infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 10s ease-in-out infinite;
+}
+
+/* Lenis Smooth Scroll default styling */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overflow: clip;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Custom glassmorphism card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px border rgba(255, 255, 255, 0.2);
+}
+
+.dark .glass-card {
+  background: rgba(14, 59, 46, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px border rgba(255, 255, 255, 0.05);
+}
+
+/* Magnetic style button interaction */
+.btn-magnetic {
+  position: relative;
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.btn-magnetic:hover {
+  transform: scale(1.03);
+}
+
+/* Leaf Particle adjustments for rendering */
+svg path {
+  transform-origin: center;
+}
