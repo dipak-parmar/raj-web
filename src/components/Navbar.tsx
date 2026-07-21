@@ -67,14 +67,7 @@ export default function Navbar() {
           
           {/* Logo */}
           <motion.div layout="position" className="shrink-0 flex items-center">
-            <Link href="/" className="whitespace-nowrap shrink-0 flex items-center space-x-2">
-              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full overflow-hidden border border-white/10 shrink-0 bg-white shadow-xs">
-                <img 
-                  src="/images/owner/owenr1.png" 
-                  alt="Raj Marketing" 
-                  className="w-full h-full object-cover" 
-                />
-              </div>
+            <Link href="/" className="whitespace-nowrap shrink-0 block">
               <span
                 className={`text-xs xs:text-sm sm:text-base md:text-xl font-playfair font-bold tracking-wider xs:tracking-widest whitespace-nowrap select-none transition-colors duration-300 ${
                   isScrolled
