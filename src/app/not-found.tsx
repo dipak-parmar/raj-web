@@ -6,10 +6,10 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-primary flex flex-col items-center justify-center text-center p-6 relative overflow-hidden select-none">
+    <div className="min-h-screen bg-backgroundCustom flex flex-col items-center justify-center text-center p-6 relative overflow-hidden select-none">
       
       {/* Decorative ambient blurred backing */}
-      <div className="absolute top-[40%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-[450px] h-[450px] bg-accent/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-[40%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-[450px] h-[450px] bg-accent/20 rounded-full blur-[100px] pointer-events-none" />
 
       {/* Main 404 message box */}
       <div className="relative z-10 space-y-6 max-w-md">
@@ -19,23 +19,23 @@ export default function NotFound() {
           initial={{ rotate: -15, scale: 0.9, opacity: 0 }}
           animate={{ rotate: 0, scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="w-20 h-20 bg-accent/10 border border-accent/20 rounded-full flex items-center justify-center mx-auto text-accent shadow-lg"
+          className="w-20 h-20 bg-primary/5 border border-primary/10 rounded-full flex items-center justify-center mx-auto text-primary shadow-sm"
         >
           <Compass className="w-10 h-10 animate-[spin_12s_linear_infinite]" />
         </motion.div>
 
         {/* Brand Translation */}
-        <span className="text-[10px] uppercase tracking-[0.3em] font-poppins text-accent font-semibold block">
+        <span className="text-[10px] uppercase tracking-[0.3em] font-poppins text-secondary font-semibold block">
           Raj Marketing / Error 404
         </span>
 
         {/* Translation Alert heading */}
-        <h1 className="text-4xl md:text-5xl font-playfair font-bold text-white leading-tight">
+        <h1 className="text-4xl md:text-5xl font-playfair font-bold text-primary leading-tight">
           Formulation Not Found
         </h1>
 
         {/* Explanation text */}
-        <p className="font-inter text-xs text-lightMint/60 leading-relaxed max-w-sm mx-auto">
+        <p className="font-inter text-xs text-textCustom/65 leading-relaxed max-w-sm mx-auto">
           The signature collection, brochure, or page pointer you have requested does not exist or has been archived. Check your connection syntax or return to our catalog directories.
         </p>
 
@@ -46,7 +46,7 @@ export default function NotFound() {
         >
           <Link
             href="/products"
-            className="inline-flex items-center space-x-2 px-8 py-3.5 bg-accent text-primary dark:text-primary font-poppins text-xs font-semibold uppercase tracking-wider rounded-xl hover:opacity-90 transition-opacity cursor-pointer shadow-lg"
+            className="inline-flex items-center space-x-2 px-8 py-3.5 bg-primary text-white font-poppins text-xs font-semibold uppercase tracking-wider rounded-xl hover:bg-secondary transition-all cursor-pointer shadow-lg shadow-primary/10"
           >
             <span>Browse Products Collection</span>
             <ArrowRight className="w-4 h-4" />
@@ -55,7 +55,7 @@ export default function NotFound() {
       </div>
 
       {/* Decorative brand footer signature */}
-      <p className="absolute bottom-8 left-0 right-0 text-[9px] uppercase tracking-widest text-lightMint/30 font-inter">
+      <p className="absolute bottom-8 left-0 right-0 text-[9px] uppercase tracking-widest text-textCustom/30 font-inter">
         ESTABLISHED SINCE 2004
       </p>
     </div>

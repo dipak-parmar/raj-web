@@ -99,17 +99,17 @@ export default function Home() {
     <div className="flex flex-col w-full relative">
       
       {/* 1. HERO SECTION */}
-      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-backgroundCustom">
         {/* Background Visual */}
-        <div className="absolute inset-0 bg-neutral-900 z-0">
+        <div className="absolute inset-0 z-0">
           <img
             src="/images/hero/pexels-enginakyurt-4531546.jpg"
             alt="Raj Marketing premium organic cosmetics background"
-            className="w-full h-full object-cover opacity-60 mix-blend-luminosity scale-102 hover:scale-105 duration-1000 transition-transform"
+            className="w-full h-full object-cover opacity-20 mix-blend-luminosity scale-102 hover:scale-105 duration-1000 transition-transform"
           />
           {/* Overlay Gradients */}
-          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-primary/20" />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-transparent to-primary/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-backgroundCustom via-backgroundCustom/50 to-backgroundCustom/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-backgroundCustom/80 via-transparent to-backgroundCustom/80" />
         </div>
 
         {/* Hero Content */}
@@ -120,12 +120,12 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.3 }}
             className="space-y-4"
           >
-            <span className="text-xs uppercase tracking-[0.3em] font-poppins text-accent font-semibold block animate-pulse">
+            <span className="text-xs uppercase tracking-[0.3em] font-poppins text-secondary font-semibold block animate-pulse">
               🌿 Organic Botanical Alchemy
             </span>
-            <h1 className="text-4xl md:text-7xl text-white font-playfair font-semibold tracking-wide leading-[1.1]">
+            <h1 className="text-4xl md:text-7xl text-primary font-playfair font-semibold tracking-wide leading-[1.1]">
               Pure Organic Luxury Cosmetics<br />
-              <span className="italic block mt-2 text-lightMint font-normal text-3xl md:text-6xl font-playfair">
+              <span className="italic block mt-2 text-secondary font-normal text-3xl md:text-6xl font-playfair">
                 Crafted For Timeless Beauty
               </span>
             </h1>
@@ -135,7 +135,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2, delay: 0.7 }}
-            className="text-base md:text-xl text-white/80 font-inter max-w-2xl mx-auto leading-relaxed"
+            className="text-base md:text-xl text-textCustom/80 font-inter max-w-2xl mx-auto leading-relaxed"
           >
             Indulge in botanical skincare rituals crafted from clean organic ingredients and scientific innovation. Trusted since 2004.
           </motion.p>
@@ -148,13 +148,13 @@ export default function Home() {
           >
             <button
               onClick={() => router.push("/products")}
-              className="w-full sm:w-auto px-8 py-4 bg-accent font-poppins hover:bg-white text-primary font-bold text-xs uppercase tracking-widest rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg shadow-white/5 cursor-pointer"
+              className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-secondary text-white font-poppins font-bold text-xs uppercase tracking-widest rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg shadow-primary/20 cursor-pointer"
             >
               Explore Collection
             </button>
             <button
               onClick={() => router.push("/about")}
-              className="w-full sm:w-auto px-8 py-4 bg-transparent border border-white text-white font-poppins hover:bg-white hover:text-primary font-bold text-xs uppercase tracking-widest rounded-full transition-all duration-300 transform hover:scale-105 cursor-pointer"
+              className="w-full sm:w-auto px-8 py-4 bg-transparent border border-primary text-primary font-poppins hover:bg-primary hover:text-white font-bold text-xs uppercase tracking-widest rounded-full transition-all duration-300 transform hover:scale-105 cursor-pointer"
             >
               Our Story
             </button>
@@ -165,12 +165,12 @@ export default function Home() {
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center justify-center text-white/40 cursor-pointer pointer-events-none"
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 flex flex-col items-center justify-center text-primary/45 cursor-pointer pointer-events-none"
         >
-          <span className="text-[10px] font-poppins font-semibold uppercase tracking-[0.2em] mb-2">
+          <span className="text-[10px] font-poppins font-semibold uppercase tracking-[0.2em] mb-2 font-bold">
             Scroll down
           </span>
-          <ChevronDown className="w-5 h-5" />
+          <ChevronDown className="w-5 h-5 text-primary/60" />
         </motion.div>
       </section>
 

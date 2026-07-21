@@ -7,24 +7,24 @@ export default function AboutPage() {
   return (
     <div className="pt-24 min-h-screen flex flex-col">
       {/* Banner */}
-      <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center bg-primary overflow-hidden">
-        <div className="absolute inset-0 bg-neutral-900 opacity-60 z-0">
+      <section className="relative h-[40vh] min-h-[300px] flex items-center justify-center bg-lightMint/80 overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <img
             src="/images/hero/pexels-enginakyurt-4531546.jpg"
             alt="About us background"
-            className="w-full h-full object-cover scale-102"
+            className="w-full h-full object-cover scale-102 opacity-15 mix-blend-luminosity"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-primary/40 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-t from-backgroundCustom via-backgroundCustom/50 to-transparent z-0" />
         
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white space-y-3">
-          <span className="text-xs uppercase tracking-[0.3em] font-poppins text-accent font-bold">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-primary space-y-3">
+          <span className="text-xs uppercase tracking-[0.3em] font-poppins text-secondary font-bold">
             Since 2004
           </span>
           <h1 className="text-4xl md:text-6xl font-playfair font-bold">
             Our Luxury Heritage
           </h1>
-          <p className="text-xs md:text-sm font-inter text-lightMint/60 select-none">
+          <p className="text-xs md:text-sm font-inter text-secondary/70 select-none">
             Home / About Us
           </p>
         </div>

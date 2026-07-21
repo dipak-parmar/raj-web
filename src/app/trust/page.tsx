@@ -40,21 +40,21 @@ export default function TrustPage() {
   return (
     <div className="pt-24 min-h-screen flex flex-col">
       {/* Banner */}
-      <section className="relative h-[35vh] min-h-[250px] flex items-center justify-center bg-primary overflow-hidden">
-        <div className="absolute inset-0 bg-neutral-900 opacity-60 z-0">
+      <section className="relative h-[35vh] min-h-[250px] flex items-center justify-center bg-lightMint/80 overflow-hidden">
+        <div className="absolute inset-0 z-0">
           <img
             src="/images/hero/pexels-enginakyurt-4531546.jpg"
             alt="Trust page background"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-15 mix-blend-luminosity"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/70 to-primary/40 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-t from-backgroundCustom via-backgroundCustom/50 to-transparent z-0" />
         
-        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-white space-y-2">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center text-primary space-y-2">
           <h1 className="text-4xl md:text-6xl font-playfair font-bold">
             Trust & Quality Standards
           </h1>
-          <p className="text-xs font-inter text-lightMint/60 select-none">
+          <p className="text-xs font-inter text-secondary/70 select-none">
             Home / Trust
           </p>
         </div>
