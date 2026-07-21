@@ -21,11 +21,16 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 });
 
+
+
 export const metadata: Metadata = {
   title: "RAJ MARKETING | Premium Organic Luxury Skincare & Cosmetics",
   description: "Experience the peak of organic skincare crafted with natural purity, botanical innovation, and over 35 years of legacy. Shop our premium range.",
   keywords: "Raj Marketing, cosmetics, organic skincare, natural beauty, luxury cosmetics, premium moisturizer, hydrating serum, clay mask",
   authors: [{ name: "Raj Marketing Team" }],
+  icons: {
+    icon: "/images/owner/owenr1.png",
+  },
   openGraph: {
     title: "RAJ MARKETING | Premium Organic Luxury Skincare",
     description: "Experience pure organic skincare crafted back since 2004. Explore our collection of premium oils, botanical serums, and natural toners.",
